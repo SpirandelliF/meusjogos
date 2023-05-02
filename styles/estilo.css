@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Jura';
+    src: url('Fontes/Jura-Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Jura-Bold';
+    src: url('Fontes/static/Jura-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --cor-azul: #03B4DB;
+    --cor-preta: #000000;
+    --cor--amarela: #FFF500;
+    --cor-branca: #FFFFFF;
+    --fonte-menu: 'Jura-Bold';
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-preta);
+}
+
+.cabecalho {
+    padding: 24px;
+    background-color: var(--cor-azul);
+    text-align: center;
+    transition: all 1.5s;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    transition: all 1.5s;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-menu);
+    font-size: 1.25rem;
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor--amarela);
+}
+
+.apresentacao{
+    margin: 2% 1%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.apresentacao__hover {
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+    color: var(--cor-branca);
+}
+
+.apresentacao__hover:hover .apresentacao__hover__sobrepor {
+    height: 450px;
+}
+
+.apresentacao__hover__sobrepor {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--cor-branca);
+    border-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 100%;
+    height: 0%;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.apresentacao__hover__jogo {
+    border: 2px solid var(--cor-branca);
+    width: 300px;
+    height: 450px;
+}
+
+.apresentacao__hover__sobrepor__titulo {
+    font-family: 'Jura-Bold';
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 0vh;
+}
+
+.apresentacao__hover__sobrepor__conteudo {
+    display: flex; 
+    flex-direction: column;  
+    justify-content: left;
+    padding: 40px 0px;
+    position: absolute;
+    bottom: 35%;
+}
+
+.apresentacao__hover__sobrepor__conteudo__conteudo {
+    font-family: 'Jura-Bold';
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 0vh;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.apresentacao__hover__sobrepor__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    bottom: 2%;
+}
+
+.apresentacao__hover__sobrepor__link__link{
+    font-family: 'Jura-Bold';
+    font-size: 24px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--cor-branca);
+    border: 2px solid var(--cor-branca);
+    border-radius: 5px;
+}
+
+.apresentacao__hover__sobrepor__link__link:hover {
+    background-color: var(--cor-branca);
+    color: var(--cor-preta);
+}
+
+@media (max-width: 670px) {
+    .cabecalho {
+        background-color: var(--cor-azul);
+    }
+
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cabecalho__menu__link {
+        font-family: var(--fonte-menu);
+        font-size: 0.8rem;
+        color: var(--cor-branca);
+        text-decoration: none;
+    }
+
+    .cabecalho__menu__link:hover {
+        color: var(--cor--amarela);
+    }
+}
